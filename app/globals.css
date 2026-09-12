@@ -43,3 +43,100 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #BDB3A3;
 }
+
+:root{
+  /* Accessible palette (examples with good contrast on a light/neutral page) */
+  --bg: #f5f1ec;         /* page background (unchanged) */
+  --text: #222222;       /* primary text (high contrast) */
+  --muted: #575f66;      /* labels / helper text (meets contrast) */
+  --placeholder: #6b7280; /* placeholder text (kept readable) */
+  --accent: #8b2f18;     /* primary accent / link color (dark warm red) */
+  --button-bg: #9b3f2a;  /* button background (ensures white text contrast) */
+  --button-text: #ffffff; /* button text */
+  --input-border: #d8cfc8;/* input border */
+  --input-focus: #b14d33; /* input focus color */
+}
+
+/* Page / typographic improvements */
+body, .login-form {
+  color: var(--text);
+  background-color: var(--bg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Headings */
+.login-form h1, .brand-title {
+  color: var(--text);     /* make "Short" and other headings dark */
+  font-weight: 700;
+}
+
+/* Labels and helper text */
+.login-form label,
+.form-label,
+.login-form .help-text {
+  color: var(--muted);     /* darker than before so labels read easily */
+  font-weight: 600;
+}
+
+/* Inputs */
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form textarea {
+  color: var(--text);
+  background: #fff;
+  border: 1px solid var(--input-border);
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+/* Placeholder color — keep opacity set to 1 for consistent contrast */
+.login-form input::placeholder {
+  color: var(--placeholder);
+  opacity: 1;
+}
+
+/* Focus states (visible and high-contrast) */
+.login-form input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(177,77,51,0.12);
+  border-color: var(--input-focus);
+}
+
+/* Button (Sign in) */
+.btn-primary {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Button hover and focus */
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #8e3923; /* slightly darker hover */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  outline: none;
+}
+
+/* Link (Sign up) — make color stronger and ensure contrast */
+.signup-link {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* If your "Sign in" heading inside the form was very pale, ensure it becomes readable */
+.login-form .panel-title {
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* Reduce very-light decorative text (if any) */
+.small-muted {
+  color: var(--muted);
+}
