@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #F7F4EE;
+  --ink: #282420;
+  --surface-border: #E5DFD3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F7F4EE;
+  color: #282420;
+  font-family: 'Source Sans 3', Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #EBD0C5;
+  color: #282420;
+}
+
+/* Editorial subtle scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F4EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D0C3;
+  border-radius: 4px;
+  border: 2px solid #F7F4EE;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BDB3A3;
+}
